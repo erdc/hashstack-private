@@ -24,7 +24,7 @@ setup-x86_64.exe:
 
 proteus_ready.done:
 	git clone -b roams-hashstack git@github.com:erdc-cm/proteus.git proteus
-	cd proteus; make hashdist stack make stack/default.yaml
+	cd proteus; make hashdist stack stack/default.yaml
 	touch proteus_ready.done
 
 stack_ready.done: proteus_ready.done proteus/stack proteus/hashdist
