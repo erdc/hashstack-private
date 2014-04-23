@@ -11,7 +11,7 @@
 
 .PHONY: all
 
-all: CorpsTools.exe
+all: Install_CorpsTools.exe
 
 CACHE_DIR=./corpstools_cygwin_base
 MIRROR=http://mirror.mcs.anl.gov/cygwin/
@@ -27,6 +27,13 @@ proteus_ready.done:
 	cd proteus; make hashdist stack stack/default.yaml
 	touch proteus_ready.done
 
+proteus-mprans: 
+	git clone git@github.com:erdc-cm/proteus-mprans.git
+
+proteus_mprans_build.done: nsis_proteus_build.done proteus-mprans
+	cd proteus-mprans; PROTEUS=../proteus PROTEUS_PREFIX=../proteus/cygwin ../proteus/cygwin/bin/python setup.py install
+	touch proteus_mprans_ready.done
+
 stack_ready.done: proteus_ready.done proteus/stack proteus/hashdist
 	cd proteus/stack; ../hashdist/bin/hit develop -v -f -l copy -k error default.yaml ../cygwin
 	touch stack_ready.done
@@ -35,6 +42,6 @@ nsis_proteus_build.done: proteus_ready.done stack_ready.done
 	cd proteus; make NO_MATLAB=1 VERBOSE=1 check 
 	touch nsis_proteus_build.done
 
-CorpsTools.exe: nsis_proteus_build.done installer.nsi setup-x86_64.exe
+Install_CorpsTools.exe: nsis_proteus_build.done proteus_mprans_build.done installer.nsi setup-x86_64.exe
 	/cygdrive/c/Program\ Files\ \(x86\)/NSIS/makensis installer.nsi
 
