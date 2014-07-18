@@ -6,6 +6,9 @@ sources:
   - url: git@bitbucket.org:ibaned/scorec.git
     key: git:ccd43aaab35fbc471f24f20860025985595a3b3a
 
+defaults:
+  relocatable: false
+
 build_stages:
 
 - name: setup_builddir
