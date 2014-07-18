@@ -26,7 +26,7 @@ build_stages:
   '-DZOLTAN_LIBRARY=${ZOLTAN_DIR}/lib/libzoltan.a',
   '-DZOLTAN_INCLUDE_DIR=${ZOLTAN_DIR}/include',
   '-DBUILD_SHARED_LIBS=True',
-  '-DSIM_MPI=mpich',
+  '-DSIM_MPI=mpich2',
   '-DSIMMETRIX_LIB_DIR=${SIMMETRIX_LIB}',
   '-DSIMMETRIX_INCLUDE_DIR=${SIMMETRIX_INCLUDE}'
   ]

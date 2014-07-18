@@ -6,6 +6,10 @@ sources:
 - url: http://www.cs.sandia.gov/~kddevin/Zoltan_Distributions/zoltan_distrib_v3.8.tar.gz
   key: tar.gz:lpoumvepxhdtwis3xtz5ebwfldbrrszj
 
+defaults:
+  #include/Makefile.export.zoltan.macros
+  relocatable: false
+
 build_stages:
 
   - name: setup_builddir
@@ -19,7 +23,7 @@ build_stages:
     after: setup_builddir
     handler: bash
     bash: |
-      export MPI_DIR=dirname $(dirname $MPICC)
+      export MPI_DIR=$(dirname $(dirname $MPICC) )
       export LD_LIBRARY_PATH=${MPI_DIR}/lib
 
   - name: configure
