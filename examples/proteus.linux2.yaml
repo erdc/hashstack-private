@@ -5,9 +5,6 @@
 # at the YAML files in the top-level directory and choose
 # the most *specific* file that matches your environment.
 
-parameters:
-  airgap: True
-
 extends:
 - file: debian.yaml
 
@@ -49,6 +46,8 @@ packages:
   petsc4py:
     with_conf: true
   pytables:
+  scorec:
+  simmetrix:
   sphinx:
   superlu:
   sympy:
@@ -72,3 +71,10 @@ packages:
   ipython-gridwidget:
   shapely:
   rtree:
+  zoltan:
+    build_with: |
+      parmetis
+
+parameters:
+  HOST_SIMMETRIX_LIB: /usr/local/simmetrix/9.0-140607/lib/x64_rhel5_gcc41
+  HOST_SIMMETRIX_INCLUDE: /usr/local/simmetrix/9.0-140607/include
