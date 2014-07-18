@@ -71,6 +71,7 @@ packages:
   ipython-gridwidget:
   shapely:
   rtree:
+  memory_profiler:
   zoltan:
     build_with: |
       parmetis

@@ -71,3 +71,4 @@ packages:
   ipython-gridwidget:
   shapely:
   rtree:
+  memory_profiler:
