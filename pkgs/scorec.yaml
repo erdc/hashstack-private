@@ -1,33 +1,17 @@
-extends: [cmake_package]
+extends: [base_package]
 dependencies:
   build: [mpi, parmetis, zoltan, simmetrix]
 
 sources:
-  - url: git@github.com:SCOREC/core-sim.git
-    key: git:9b0ccfd77e60289eefe12f4fcde8c9483ed27e78
+  - url: http://www.scorec.rpi.edu/~dibanez/SCOREC-1.0.0-Linux.tar.gz
+    key: tar.gz:6gkv3a7uyqjcweognjnh47vblr7m5sku
 
 build_stages:
 
-- name: setup_builddir
+- name: install
   after: prologue
   handler: bash
   bash: |
-    mkdir -p _build
-    cd _build
-
-- name: configure
-  extra: [
-  '-DCMAKE_C_COMPILER=${MPICC}',
-  '-DCMAKE_CXX_COMPILER=${MPICXX}',
-  '-DENABLE_ZOLTAN=ON',
-  '-DMETIS_LIBRARY=${PARMETIS_DIR}/lib/libmetis.so',
-  '-DPARMETIS_LIBRARY=${PARMETIS_DIR}/lib/libparmetis.so',
-  '-DPARMETIS_INCLUDE_DIR=${PARMETIS_DIR}/include',
-  '-DZOLTAN_LIBRARY=${ZOLTAN_DIR}/lib/libzoltan.a',
-  '-DZOLTAN_INCLUDE_DIR=${ZOLTAN_DIR}/include',
-  '-DBUILD_SHARED_LIBS=True',
-  '-DSIM_MPI=mpich',
-  '-DSIMMETRIX_LIB_DIR=${SIMMETRIX_LIB}',
-  '-DSIMMETRIX_INCLUDE_DIR=${SIMMETRIX_INCLUDE}'
-  ]
+    cp -r include ${ARTIFACT}/include
+    cp -r lib ${ARTIFACT}/lib
 
