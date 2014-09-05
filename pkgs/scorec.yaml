@@ -1,10 +1,10 @@
 extends: [base_package]
 dependencies:
-  build: [mpi, parmetis, zoltan, simmetrix]
+  build: []
 
 sources:
-  - url: http://www.scorec.rpi.edu/~dibanez/SCOREC-1.0.0-Linux.tar.gz
-    key: tar.gz:6gkv3a7uyqjcweognjnh47vblr7m5sku
+  - url: http://www.scorec.rpi.edu/~dibanez/SCOREC-1.0.1-Linux.tar.gz
+    key: tar.gz:lrft3ba5ksdkntk6mvbvm3qx5rkudrbr
 
 build_stages:
 
