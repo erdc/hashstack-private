@@ -58,8 +58,6 @@ packages:
   grib_api:
   pyproj:
   pygrib:
-  adh:  
-  stwave:  
   scipy:
   ipython:
   h5py:
