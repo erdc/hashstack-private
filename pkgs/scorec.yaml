@@ -3,8 +3,8 @@ dependencies:
   build: []
 
 sources:
-  - url: http://www.scorec.rpi.edu/~dibanez/SCOREC-1.0.1-Linux.tar.gz
-    key: tar.gz:lrft3ba5ksdkntk6mvbvm3qx5rkudrbr
+  - url: http://www.scorec.rpi.edu/~dibanez/SCOREC-1.0.2-Linux.tar.gz
+    key: tar.gz:hbcpi5x5bryjb2uhlsvpjky2ymv6wq7b
 
 build_stages:
 
