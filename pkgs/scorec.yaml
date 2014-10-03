@@ -4,7 +4,7 @@ dependencies:
 
 sources:
   - url: http://www.scorec.rpi.edu/~dibanez/SCOREC-1.0.2-Linux.tar.gz
-    key: tar.gz:hbcpi5x5bryjb2uhlsvpjky2ymv6wq7b
+    key: tar.gz:jmyrwhfnun44tlmxxwxq6amio5vdg2oo
 
 build_stages:
 
