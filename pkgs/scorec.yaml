@@ -4,7 +4,7 @@ dependencies:
 
 sources:
   - url: http://www.scorec.rpi.edu/~dibanez/SCOREC-1.0.2-Linux.tar.gz
-    key: tar.gz:hbcpi5x5bryjb2uhlsvpjky2ymv6wq7b
+    key: tar.gz:f44glozf5dzhvxcl7nsrnk6goqwzdtv4
 
 build_stages:
 
@@ -14,4 +14,5 @@ build_stages:
   bash: |
     cp -r include ${ARTIFACT}/include
     cp -r lib ${ARTIFACT}/lib
+    cp -r bin ${ARTIFACT}/bin
 
