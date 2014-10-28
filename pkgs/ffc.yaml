@@ -1,10 +1,15 @@
 extends: [distutils_package]
 dependencies:
-  build: [numpy]
+  build: [numpy, swig]
+  run: [fiat, instant, numpy, six, ufl]
 
 sources:
-- url: https://bitbucket.org/fenics-project/ffc.git
-  key: git:b5a10ed762bf34d97353ce3f0ac01f3608ffd8c7
+- key: git:df1862de2c401aa8986a9c4808d0aed0a772fe86
+  url: https://bitbucket.org/fenics-project/ffc.git
+
+defaults:
+  # share/ufc/UFCConfig.cmake contains hard-coded path
+  relocatable: false
 
 when_build_dependency:
 - prepend_path: PATH

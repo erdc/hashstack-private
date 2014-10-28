@@ -5,9 +5,6 @@
 # at the YAML files in the top-level directory and choose
 # the most *specific* file that matches your environment.
 
-parameters:
-  airgap: True
-
 extends:
 - file: debian.yaml
 
@@ -25,18 +22,14 @@ packages:
     host: false
     build_with: |
       bzip2, sqlite
-    link: shared
   blas:
     use: host-blas
   daetk:
   mpi:
     use: mpich
-  mpi4py:
   nose:
   hdf5:
-  pygments:
-  tornado:
-  pyzmq:
+  ipython:
   matplotlib:
   petsc:
     build_with: |
@@ -54,21 +47,4 @@ packages:
   sympy:
   tetgen:
   triangle:
-  jasper:
-  grib_api:
-  pyproj:
-  pygrib:
-  adh:  
-  stwave:  
-  scipy:
-  ipython:
-  h5py:
-  pydap:
-  leafletwidget:
-  geojson:
-  rdp:
-  ipython-widgetmode:
-  ipython-d3plot:
-  ipython-gridwidget:
-  shapely:
-  rtree:
+  memory_profiler:
