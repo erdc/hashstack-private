@@ -1,7 +1,10 @@
 extends: [base_package]
 
 dependencies:
-  build: [bzip2, mpi, zlib]
+  when platform == 'linux':
+    build: [bzip2, mpi, zlib, patchelf, {{build_with}}]
+  when platform != 'linux':
+    build: [bzip2, mpi, zlib, {{build_with}}]
 
 sources:
 - url: http://downloads.sourceforge.net/boost/boost_1_55_0.tar.bz2
@@ -14,6 +17,13 @@ build_stages:
   bash: |
     ./bootstrap.sh --with-toolset={{toolset}} --prefix=${ARTIFACT}
 
+- name: call_once_variadic
+  before: bjam
+  after: bootstrap
+  handler: bash
+  files: [call_once_variadic.patch]
+  bash: |
+    patch -p2 < _hashdist/call_once_variadic.patch
 
 - name: 128bitIntegerSupport1
   before: bjam
@@ -39,6 +49,15 @@ build_stages:
   bash: |
     patch -p2 < _hashdist/boost_1_55_fix_warnings.patch
 
+- name: set-address_model
+  before: bjam
+  handler: bash
+  bash: |
+    address_model={{address_model}}
+    if [ -z ${address_model} ]; then
+        address_model=$(getconf LONG_BIT)
+    fi
+
 - name: bjam
   after: bootstrap
   handler: bash
@@ -47,7 +66,7 @@ build_stages:
       echo "using mpi ;" > user-config.jam
       ./bjam -q \
              toolset={{toolset}} \
-             address-model={{address_model}} \
+             address-model=${address_model} \
              -j ${HASHDIST_CPU_COUNT} \
              --user-config=user-config.jam \
              --build-dir=_build\
@@ -65,7 +84,7 @@ build_stages:
     bash: |
       ./bjam -q \
              toolset={{toolset}} \
-             address-model={{address_model}} \
+             address-model=${address_model} \
              -j ${HASHDIST_CPU_COUNT} \
              --without-context \
              --without-coroutine \
@@ -82,6 +101,15 @@ build_stages:
              -sZLIB_BINARY=z \
              -sZLIB_INCLUDE=${ZLIB_DIR}/include \
              -sZLIB_LIBPATH=${ZLIB_DIR}/lib
+
+- when: platform == 'linux'
+  name: rpath_fix
+  after: bjam
+  handler: bash
+  bash: |
+    for lib in ${ARTIFACT}/lib/*.so.*; do
+        ${PATCHELF} --set-rpath ${ARTIFACT}/lib:${BZIP2_DIR}/lib:${ZLIB_DIR}/lib ${lib}
+    done
 
 when_build_dependency:
 - set: BOOST_MULTITHREADED

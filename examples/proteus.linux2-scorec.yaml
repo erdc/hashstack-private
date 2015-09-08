@@ -20,6 +20,7 @@ packages:
     use: host-cmake
   python:
     host: false
+    link: shared
     build_with: |
       bzip2, sqlite
   blas:
@@ -27,6 +28,7 @@ packages:
   daetk:
   mpi:
     use: host-mpi
+  mpi4py:
   nose:
   hdf5:
   ipython:
@@ -35,7 +37,7 @@ packages:
     build_with: |
       parmetis
     download: |
-      hypre, blacs, scalapack
+      hypre, blacs, scalapack, superlu, superlu_dist
     coptflags: -O2
     link: shared
     debug: true
@@ -54,14 +56,10 @@ packages:
       parmetis
 
 parameters:
-  HOST_MPICC: /usr/local/openmpi/1.4.3/bin/mpicc
-  HOST_MPICXX: /usr/local/openmpi/1.4.3/bin/mpic++
-  HOST_MPIF77: /usr/local/openmpi/1.4.3/bin/mpif77
-  HOST_MPIF90: /usr/local/openmpi/1.4.3/bin/mpif90
-  HOST_MPIEXEC: /usr/local/openmpi/1.4.3/bin/mpiexec
+  HOST_MPI_DIR: /usr/local/mpich3/3.1.2-thread-multiple
   HOST_CMAKE: /usr/local/cmake/latest/bin/cmake
-  HOST_SIMMETRIX_LIB: /net/common/meshSim/8.0-140608/lib/x64_rhel5_gcc41
-  HOST_SIMMETRIX_INCLUDE: /net/common/meshSim/8.0-140608/include
+  HOST_SIMMETRIX_LIB: /net/common/meshSim/9.0-140816/lib/x64_rhel5_gcc41
+  HOST_SIMMETRIX_INCLUDE: /net/common/meshSim/9.0-140816/include
   HOST_PYTHON: python
   HOST_PKG_CONFIG_EXECUTABLE: pkg-config
-  PATH: /usr/bin:/bin:/usr/local/openmpi/1.4.3/bin/
+  PATH: /usr/bin:/bin:/usr/local/mpich3/3.1.2-thread-multiple/bin/
