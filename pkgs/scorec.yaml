@@ -5,6 +5,13 @@ dependencies:
 sources:
   - url: http://www.scorec.rpi.edu/~dibanez/SCOREC-1.2.0-Linux.tar.gz
     key: tar.gz:pejcazrou7tlmygjt65juxy3m3eiyuwo
+    
+#defaults:
+#  relocatable: true
+
+defaults:
+  relocatable: false
+>>>>>>> origin/scorec
 
 build_stages:
 
