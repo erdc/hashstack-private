@@ -33,6 +33,7 @@ packages:
   hdf5:
   ipython:
   matplotlib:
+  ode:
   petsc:
     build_with: |
       parmetis
@@ -43,6 +44,7 @@ packages:
     debug: true
   petsc4py:
     with_conf: true
+  pip:
   pytables:
   scorec:
   simmetrix:
