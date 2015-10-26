@@ -26,7 +26,6 @@ packages:
     link: shared
     build_with: |
       bzip2, sqlite
-    link: shared
   blas:
     use: host-blas
   daetk:
@@ -59,3 +58,8 @@ packages:
   memory_profiler:
   ipdb:
   pip:
+  scorec:
+  simmetrix:
+  zoltan:
+    build_with: |
+      parmetis
