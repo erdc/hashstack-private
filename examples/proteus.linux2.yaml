@@ -72,9 +72,6 @@ packages:
   netcdf4f:
   netcdf4cpp:
   jasper:
-  grib_api:
-  pyproj:
-  pygrib:
   scipy:
   ipython:
   terminado:
