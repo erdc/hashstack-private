@@ -38,6 +38,7 @@ packages:
   ipython:
   matplotlib:
   petsc:
+    version: 3.6.1
     build_with: |
       parmetis      
     download: |
@@ -46,6 +47,7 @@ packages:
     link: shared
     debug: false
   petsc4py:
+    version: 3.6.0
     with_conf: true
   pillow:
   pytables:
@@ -65,3 +67,5 @@ packages:
   python-netcdf4:
   h5py:
   ode:
+  jupyter:
+ 
