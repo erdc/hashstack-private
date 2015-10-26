@@ -10,6 +10,9 @@ sources:
 - key: tar.gz:fvfqkqzmtao4yk2zmb6vb3vscsx63q4u
   url: https://software.ecmwf.int/wiki/download/attachments/3473437/grib_api-1.12.3.tar.gz
 
+defaults:
+  relocatable: false
+
 build_stages:
   - name: configure
     mode: override

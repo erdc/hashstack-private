@@ -9,7 +9,6 @@ sources:
 defaults:
   #include/Makefile.export.zoltan.macros
   relocatable: false
-#>>>>>>> mainline/master
 
 build_stages:
 
@@ -25,9 +24,6 @@ build_stages:
   handler: bash
   bash: |
     export MPI_DIR=$MPI_ROOT
-#=======
-#      export MPI_DIR=$(dirname $(dirname $MPICC) )
-#      export LD_LIBRARY_PATH=${MPI_DIR}/lib
 
 - name: configure
   after: setEnv
