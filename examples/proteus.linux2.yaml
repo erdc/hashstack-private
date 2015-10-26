@@ -31,14 +31,15 @@ packages:
       bzip2, sqlite
   blas:
     use: host-blas
+  lapack:
+    use: host-lapack
   daetk:
   mpi:
     use: mpich
   mpi4py:
   nose:
+  coverage:
   hdf5:
-  pygments:
-  tornado:
   matplotlib:
   pyzmq:
   parmetis:
@@ -66,40 +67,29 @@ packages:
     address_model: 64
     build_with: |
       python
-
-  cgal:
-  pycgal:
   netcdf4:
-  netcdf4f:
   python-netcdf4:
-  vapory:
+  netcdf4f:
+  netcdf4cpp:
   jasper:
+  grib_api:
+  pyproj:
+  pygrib:
   scipy:
   ipython:
   terminado:
   h5py:
   pydap:
-  leafletwidget: 
-    sources:
-      - key: git:f9147c5b13a69b80bc28d3574f7ba6b2c576aed2
-        url: https://github.com/erdc-cm/leafletwidget.git
+  leafletwidget:
   geojson:
   rdp:
-  ipython-d3plot:
-  ipython-gridwidget:
-  shapely:
   rtree:
-  matlab:
-    use: host-matlab
-  pymatbridge:
   ode:
   ipdb:
   pip:
-  jupyter-pip:
   pexpect:
   pcs_api:
+  jupyter-pip:
+  pythreejs:
   scorec:
-  simmetrix:
   zoltan:
-    build_with: |
-      parmetis
