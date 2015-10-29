@@ -75,16 +75,9 @@ packages:
   netcdf4:
   netcdf4f:
   python-netcdf4:
-  vapory:
-  jasper:
-  grib_api:
-  pyproj:
-  pygrib:
-  scipy:
-  h5py:
-  pydap:
-  geojson:
-  rdp:
-  ode:
+  ipdb:
   pip:
-  pexpect:
+  h5py:
+  ode:
+ # vtk:
+ # pyvtk:

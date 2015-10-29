@@ -30,17 +30,15 @@ packages:
   blas:
     use: host-osx-framework-accelerate
   daetk:
-  matplotlib:
   mpi:
     use: mpich
   mpi4py:
   nose:
   hdf5:
-  pygments:
-  tornado:
-  pyzmq:
-  parmetis:
+  ipython:
+  matplotlib:
   petsc:
+    version: 3.6.1
     build_with: |
       parmetis      
     download: |
@@ -49,6 +47,7 @@ packages:
     link: shared
     debug: false
   petsc4py:
+    version: 3.6.0
     with_conf: true
   pillow:
   pytables:
@@ -56,7 +55,17 @@ packages:
   superlu:
   sympy:
   tetgen:
+  triangle:
   memory_profiler:
   ipdb:
   pip:
-  pexpect:
+  doxygen:
+  scipy:
+  netcdf4:
+  netcdf4f:
+  netcdf4cpp:
+  python-netcdf4:
+  h5py:
+  ode:
+  jupyter:
+ 
