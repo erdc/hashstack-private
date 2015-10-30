@@ -36,14 +36,16 @@ packages:
   matplotlib:
   ode:
   petsc:
+    version: 3.6.1
     build_with: |
       parmetis
     download: |
-      hypre, blacs, scalapack, superlu, superlu_dist
+      hypre, blacs, spooles, scalapack, superlu, superlu_dist, mumps
     coptflags: -O2
     link: shared
-    debug: true
+    debug: false
   petsc4py:
+    version: 3.6.0
     with_conf: true
   pip:
   pytables:
@@ -57,6 +59,7 @@ packages:
   zoltan:
     build_with: |
       parmetis
+  memory_profiler:
 
 parameters:
   HOST_MPI_DIR: /usr/local/mpich3/3.1.2-thread-multiple
