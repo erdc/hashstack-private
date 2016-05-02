@@ -1,9 +1,9 @@
 extends: [setuptools_package]
 
 dependencies:
-  build: []
-  run: []
+  build: [MarkupSafe, backports-ssl_match_hostname, certifi, decorator, ipykernel, ipython, ipython-genutils, jinja2, jsonschema, jupyter-client, jupyter-console, mistune, nbconvert, nbformat, notebook, path_py, pickleshare, ptyprocess, pygments, pyzmq, qtconsole, simplegeneric, terminado, tornado, traitlets, python]
+  run: [MarkupSafe, backports-ssl_match_hostname, certifi, decorator, ipykernel, ipython, ipython-genutils, jinja2, jsonschema, jupyter-client, jupyter-console, mistune, nbconvert, nbformat, notebook, path_py, pickleshare, ptyprocess, pygments, pyzmq, qtconsole, simplegeneric, terminado, tornado, traitlets, python]
 
 sources:
- - key: zip:jzu3pjn2eej5krt6em4zivsdkysqpur7
-   url: https://pypi.python.org/packages/source/j/jupyter_core/jupyter_core-4.0.6.zip
+ - key: git:f8af9e9fbb0f6e77a5afd98d08ecbb9c9163bda4
+   url: https://github.com/jupyter/jupyter_core.git

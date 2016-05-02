@@ -1,9 +1,9 @@
 extends: [setuptools_package]
 
 dependencies:
-  build: []
-  run: []
+  build: [decorator]
+  run: [decorator]
 
 sources:
- - key: tar.gz:bmkawsuuutyzkgeh3g6oizinuii7pfqa
-   url: https://pypi.python.org/packages/source/t/traitlets/traitlets-4.0.0.tar.gz
+ - key: git:015dcaea57c9dc2cadf7d99fdd5fe6fe6ce38415
+   url: https://github.com/ipython/traitlets.git

@@ -1,7 +1,7 @@
 extends: [autotools_package]
 
 dependencies:
-    build: [jasper, netcdf4]
+    build: [jasper, netcdf4, jpeg]
 
 defaults:
   relocatable: false

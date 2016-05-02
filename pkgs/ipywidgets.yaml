@@ -1,9 +1,6 @@
 extends: [setuptools_package]
 
-dependencies:
-  build: []
-  run: []
-
 sources:
- - key: tar.gz:z3vtexsfvxuvg7bncfp63hksfzog5ef3
-   url: https://pypi.python.org/packages/source/i/ipywidgets/ipywidgets-4.1.1.tar.gz
+ - key: git:b286226074a9afdb42b7089b066289a38a946a22
+   url: https://github.com/ipython/ipywidgets
+

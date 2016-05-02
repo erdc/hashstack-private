@@ -114,9 +114,9 @@ packages:
   zoltan:
     build_with: |
       parmetis
-  leafletwidget:
-  pythreejs:
+#  ipyleaflet:
+#  ipywidgets:
+#  pythreejs:
   jupyter:
   chrono:
   ipyparallel:
-  sphinxtogithub:

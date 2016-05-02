@@ -1,8 +1,8 @@
 extends: [setuptools_package]
 dependencies:
-  build: [docutils, jinja2, pygments]
-  run: [jinja2, pygments, alabaster, sphinx_rtd_theme, babel, snowballstemmer, docutils, pytz]
+  build: [docutils, jinja2, pygments, imagesize]
+  run: [jinja2, pygments, alabaster, sphinx_rtd_theme, babel, snowballstemmer, docutils, pytz, imagesize]
 
 sources:
-- key: git:f21a3039a01ba13a4405db9058dc8d3612466a4f
+- key: git:47681a063801df44c0bfbea0b0c4b4efe7bcd191
   url: https://github.com/sphinx-doc/sphinx.git

@@ -1,5 +1,9 @@
 extends: [autotools_package]
 
+dependencies:
+  build: [pyliblzma]
+  run: [pyliblzma]
+
 sources:
 - key: tar.xz:zgkgpryheii4kugri5sa3cq2bksnmnwu
   url: http://www.nasm.us/pub/nasm/releasebuilds/2.11.08/nasm-2.11.08.tar.xz

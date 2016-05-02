@@ -1,4 +1,4 @@
-extends: [distutils_package]
+extends: [setuptools_package]
 
 dependencies:
   build:
@@ -9,17 +9,17 @@ dependencies:
     - ipython
 
 sources:
-  - url: https://github.com/erdc-cm/leafletwidget
-    key: git:f9147c5b13a69b80bc28d3574f7ba6b2c576aed2
+  - url: https://github.com/ellisonbg/leafletwidget
+    key: git:6f41b952a9ad8e9b4614636f8cb31dc6bd727bdf
 
 
 # WARNING: This installs into user's .ipython directory
 # This is not properly isolated yet.
 
-build_stages:
-  - when: airgap
-    name: airgap
-    after: install
-    handler: bash
-    bash: |
-      unset IPYTHON_DIR && ${PYTHON} install-nbextension.py
+#build_stages:
+#  - when: airgap
+#    name: airgap
+#    after: install
+#    handler: bash
+#    bash: |
+#      unset IPYTHON_DIR && ${PYTHON} install-nbextension.py

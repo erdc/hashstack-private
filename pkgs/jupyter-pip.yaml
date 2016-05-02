@@ -5,5 +5,5 @@ dependencies:
   run: []
 
 sources:
- - key: git:9fe7ab80870b2c7de8380ab8013fbb33df7ee847
+ - key: git:6370235bdc09e5905d919c9ab28d47df45d60508
    url: https://github.com/jdfreder/jupyter-pip.git

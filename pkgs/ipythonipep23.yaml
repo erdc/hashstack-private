@@ -1,4 +1,4 @@
-extends: [distutils_package]
+extends: [setuptools_package]
 dependencies:
   build: [python,pyzmq, tornado, jinja2, pygments, sphinx]
   run: [python, pyzmq, tornado, jinja2, pygments, sphinx]

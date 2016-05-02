@@ -1,8 +1,10 @@
 extends: [setuptools_package]
 
 dependencies:
-  build: [ipython, pip, jupyter-pip]
-
+  build: [ipywidgets]
+  run: [ipywidgets]
+  
 sources:
-  - key: git:ac189124bb54fe5a5e65ad6299a21becfbab94c7
-    url: https://github.com/jasongrout/pythreejs
+  - key: git:82c4d5a55e39db3146840774539e580e9f1c5fd8
+    url: https://github.com/jovyan/pythreejs
+
