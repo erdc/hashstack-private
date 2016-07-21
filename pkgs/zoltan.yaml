@@ -1,6 +1,6 @@
 extends: [autotools_package]
 dependencies:
-  build: [mpi,{{build_with}}]
+  build: [mpi,parmetis,{{build_with}}]
 
 sources:
 - key: tar.gz:lpoumvepxhdtwis3xtz5ebwfldbrrszj
