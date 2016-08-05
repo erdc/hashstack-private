@@ -45,7 +45,7 @@ packages:
   petsc:
     version: 3.6.1
     build_with: |
-      parmetis, superlu
+      parmetis
     download: |
       superlu_dist, hypre, blacs, scalapack, mumps
     coptflags: -O2
@@ -73,21 +73,21 @@ packages:
   netcdf4:
   netcdf4f:
   python-netcdf4:
-  vapory:
+#  vapory:
   netcdf4cpp:
   jasper:
   grib_api:
   pyproj:
   pygrib:
   scipy:
-  ipython:
+#  ipython:
   terminado:
   h5py:
   pydap:
   geojson:
   rdp:
-  ipython-d3plot:
-  ipython-gridwidget:
+#  ipython-d3plot:
+#  ipython-gridwidget:
   shapely:
   rtree:
   matlab:
@@ -95,10 +95,10 @@ packages:
   ode:
   ipdb:
   pip:
-  jupyter-pip:
+#  jupyter-pip:
   pexpect:
   pcs_api:
-  zoltan:
+#  zoltan:
     build_with: |
       parmetis
 #  ipyleaflet:
@@ -106,4 +106,5 @@ packages:
 #  pythreejs:
   jupyter:
   chrono:
-  ipyparallel:
+#  ipyparallel:
+  pytest:
