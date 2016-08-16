@@ -4,7 +4,7 @@ dependencies:
 
 sources:
   - url: https://github.com/SCOREC/core.git 
-    key: git:f39f20283e698b516ae37b86603480d79b97a54d
+    key: git:d445d29e71453fc1c1e1763a58ca1fbf1fd6a87c
 
 defaults:
   relocatable: false
