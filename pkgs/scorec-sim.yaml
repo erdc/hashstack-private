@@ -18,6 +18,12 @@ build_stages:
     mkdir -p _build
     cd _build
 
+- name: build_execs
+  after: make
+  handler: bash
+  bash: |
+    make split zsplit convert mdlConvert from_gmsh 
+
 - name: configure
   extra: [
   '-DCMAKE_C_COMPILER=${MPICC}',

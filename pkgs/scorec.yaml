@@ -18,6 +18,13 @@ build_stages:
     mkdir -p _build
     cd _build
 
+- name: build_execs
+  after: make
+  handler: bash
+  bash: |
+    make split #zsplit from_gmsh 
+    #ln -s build/test/split ${PROTEUS_PREFIX}/bin/
+
 - name: configure
   extra: [
   '-DCMAKE_C_COMPILER=${MPICC}',
