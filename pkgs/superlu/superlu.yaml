@@ -4,7 +4,7 @@ dependencies:
   build: [blas]
 
 sources:
-- url: https://github.com/erdc-cm/superlu
+- url: https://github.com/erdc/superlu
   key: git:51cd6c3f05d4701fa7163aee4e356e11ac81153e
 
 build_stages:
