@@ -4,7 +4,7 @@ dependencies:
   build: [python,mpi,parmetis]
 
 sources:
-- url: ssh://git@github.com/erdc-cm/adh.git
+- url: ssh://git@github.com/erdc/adh.git
   key: git:aacae182af573deb6cf292ec45de50dc7b66e773
 
 build_stages:
