@@ -23,12 +23,12 @@ setup-x86_64.exe:
 	wget http://www.cygwin.com/setup-x86_64.exe
 
 proteus_ready.done:
-	git clone -b roams-hashstack git@github.com:erdc-cm/proteus.git proteus
+	git clone -b roams-hashstack git@github.com:erdc/proteus.git proteus
 	cd proteus; make hashdist stack stack/default.yaml
 	touch proteus_ready.done
 
 proteus-mprans: 
-	git clone git@github.com:erdc-cm/proteus-mprans.git
+	git clone git@github.com:erdc/proteus-mprans.git
 
 proteus_mprans_build.done: nsis_proteus_build.done proteus-mprans
 	cd proteus-mprans; PROTEUS=../proteus PROTEUS_PREFIX=../proteus/cygwin ../proteus/cygwin/bin/python setup.py install
