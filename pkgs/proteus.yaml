@@ -5,7 +5,7 @@ dependencies:
 
 sources:
   - key: git:1806eeddee64277b48cfbc79155752b2617e53f8
-    url: https://github.com/erdc-cm/proteus
+    url: https://github.com/erdc/proteus
 
 # Proteus is a namespace package, do *not* link the Proteus directory itself in.
 profile_links:
